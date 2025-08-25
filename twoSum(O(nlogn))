@@ -1,8 +1,7 @@
 import java.util.Arrays;
 
-class GfG {
+class twoSum {
 
-    // Function to perform binary search
     static boolean binarySearch(int[] arr, int left,
                                 int right, int target){
         while (left <= right) {
