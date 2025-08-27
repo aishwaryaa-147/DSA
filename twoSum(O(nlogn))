@@ -1,12 +1,9 @@
 import java.util.Arrays;
-
 class twoSum {
-
     static boolean binarySearch(int[] arr, int left,
                                 int right, int target){
         while (left <= right) {
             int mid = left + (right - left) / 2;
-
             if (arr[mid] == target)
                 return true;
             if (arr[mid] < target)
@@ -16,14 +13,10 @@ class twoSum {
         }
         return false;
     }
-
     static boolean twoSum(int[] arr, int target){
-        
         Arrays.sort(arr);
-
         for (int i = 0; i < arr.length; i++) {
             int complement = target - arr[i];
-
             // Use binary search to find the complement
             if (binarySearch(arr, i + 1, arr.length - 1,
                              complement))
